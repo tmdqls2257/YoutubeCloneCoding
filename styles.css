@@ -1,0 +1,36 @@
+@import 'reset.css';
+body {
+  font-family: 'Source Sans Pro';
+}
+
+.Youtube-header {
+  padding: 15px 0;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+}
+.Youtube-main__hash {
+  margin: 1em 0 0 0;
+}
+.Youtube-main__hash a {
+  margin: 1em;
+}
+.Youtube-main__title {
+  display: flex;
+  margin: 1em;
+}
+.views {
+  margin: 1em;
+  font: 1em sans-serif;
+}
+.Youtube-main__icons {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.Youtube-profile {
+  display: flex;
+}
