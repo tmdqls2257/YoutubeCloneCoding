@@ -1,36 +1,107 @@
-@import 'reset.css';
-body {
-  font-family: 'Source Sans Pro';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.Youtube-header {
-  padding: 15px 0;
-  font-size: 25px;
-  font-weight: 600;
-  background-color: brown;
+:root {
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  --side-padding: 12px;
+  --avatar-size: 36px;
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+body {
+  font-family: monospace;
+}
+ul {
+  list-style: none;
+}
+header {
   display: flex;
   justify-content: space-between;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: var(--side-padding);
 }
-.Youtube-main__hash {
-  margin: 1em 0 0 0;
+header .logo {
+  font-size: var(--font-large);
 }
-.Youtube-main__hash a {
-  margin: 1em;
+header .logo i {
+  color: var(--red-color);
 }
-.Youtube-main__title {
+header .icons .fa-search {
+  margin-right: var(--side-padding);
+}
+.Youtube__player {
   display: flex;
-  margin: 1em;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  background-color: var(--black-color);
 }
-.views {
-  margin: 1em;
-  font: 1em sans-serif;
+.Youtube__player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
 }
-.Youtube-main__icons {
-  margin: 20px 0px;
+.Youtube__info {
+  padding: var(--side-padding);
+}
+.Youtube__info .metadata .hashtags {
+  display: flex;
+}
+.Youtube__info .metadata .hashtags li {
+  margin-right: 10px;
+  font-size: var(--font-small);
+}
+.Youtube__info .titlebox {
+  display: flex;
+}
+.Youtube__info .titlebox.title {
+  margin-right: var(--side-padding);
+  font-size: var(--font-medium);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.Youtube__info .titlebox .moreBtn {
+  height: 100%;
+}
+button,
+button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+}
+.metadata .views {
+  color: var(--grey-dark-color);
+  font-size: var(--font-small);
+}
+.Youtube__info .action {
   display: flex;
   justify-content: space-around;
-  text-align: center;
+  margin: var(--side-padding) 0;
 }
-.Youtube-profile {
+
+.Youtube__info .action button {
   display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.Youtube__info .action button i {
+  margin: 0 0.5em;
+  margin-bottom: var(--side-padding);
 }
