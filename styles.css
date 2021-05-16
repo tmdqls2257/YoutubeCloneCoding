@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  list-style: none;
   box-sizing: border-box;
 }
 
@@ -21,11 +22,9 @@
   --font-micro: 10px;
 }
 body {
-  font-family: monospace;
+  font-family: Roboto;
 }
-ul {
-  list-style: none;
-}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -102,6 +101,49 @@ button:focus {
   color: var(--grey-dark-color);
 }
 .Youtube__info .action button i {
-  margin: 0 0.5em;
+  margin: 0 auto;
   margin-bottom: var(--side-padding);
+  font-size: 16px;
+}
+.action button i.active {
+  color: var(--blue-color);
+}
+.channel {
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+  display: flex;
+  justify-content: space-between;
+}
+.channel .metadata {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+.channel .metadata img {
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+  border-radius: 50%;
+}
+.channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+.channel .metadata .info .subscribers {
+  font-size: var(--font-small);
+}
+.channel .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+.Youtube__upNext {
+  padding: 0 var(--side-padding);
+}
+.Youtube__upNext > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--side-padding) / 2);
 }
